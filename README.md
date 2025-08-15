@@ -4,7 +4,7 @@ Carlos Cano Garrido, UMA 2025
 ## Description
 This repository contains the code for my final degree project, adapting a public GitHub repository ([original repo](https://github.com/adap/flower/tree/f34d6e8d42864cfdfc4b0c4d582ce0eed07dbdef/examples/xgboost-comprehensive)) to estimate LTE Advanced cell-level throughput using XGBoost in a **federated learning** setup.  
 
-The original model was a **classification model**, and this repository adapts it to a **regression task** for the dataset containing 36 sites (`dataset_con_site_id.xlsx`). It includes a **federated model**, a **centralized model**, and a **performance evaluation script** for federated learning.
+The original model was a **classification model**, and this repository adapts it to a **regression task** for the dataset containing 36 sites (`dataset_con_site_id.xlsx`). In the project, 36 different models are trained and combined with federated techniques. It includes a **federated model**, a **centralized model**, and a **performance evaluation script** for federated learning.
 
 ## Repository Structure
 
