@@ -27,7 +27,20 @@ TFG_XGBoost_Federated/
  │ 
  └── xgboost_centralizado.py # Centralized XGBoost model
 
- ## Installation
+ TFG_XGBoost_Federated/
+│
+├── Federated_model/ # Federated learning scripts
+│ ├── init.py # Package initializer (contains original CSVs)
+│ ├── client5G.py # Federated client code
+│ ├── server5G.py # Federated server code
+│ └── task5G.py # Federated task definitions
+│
+├── dataset_con_site_id.xlsx # Dataset used in the project
+├── Federated_performance.py # Federated model evaluation
+├── pyproject.toml # Project dependencies
+└── xgboost_centralizado.py # Centralized regression model
+
+## Installation
 Make sure you have Conda and Python 3.10 installed. Then:
 
 ```bash
