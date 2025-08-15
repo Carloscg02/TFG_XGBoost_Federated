@@ -44,8 +44,7 @@ This will save the test indices for evaluation:
 flwr run .
 ````
 
-# First, run the federated version to save the indices of the test data points,
-# ensuring that the same samples are used for evaluation in both centralized and federated cases.
+First, run the federated version to save the indices of the test data points, ensuring that the same samples are used for evaluation in both centralized and federated cases.
 
 ## Project Report
 The full project report is available in the [docs folder](docs/Memoria_TFG_Carlos_Cano_Garrido.pdf).
