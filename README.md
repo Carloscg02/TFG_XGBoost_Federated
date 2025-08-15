@@ -40,7 +40,7 @@ pip install -e .
 ## Usage
 
 ### Run the federated model
-This will save the test indices for evaluation:
+This will train the federated model and save it. Also saves the test indices for evaluation:
 
 ```bash
 flwr run .
