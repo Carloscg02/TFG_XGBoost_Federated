@@ -7,6 +7,7 @@ This repository contains the code for my final degree project, adapting a public
 The original model was a **classification model**, and this repository adapts it to a **regression task** for the dataset containing 36 sites (`dataset_con_site_id.xlsx`). It includes a **federated model**, a **centralized model**, and a **performance evaluation script** for federated learning.
 
 ## Repository Structure
+
 TFG_XGBoost_Federated/
  │ 
  ├── Federated_model/ # Federated learning scripts
@@ -24,13 +25,15 @@ TFG_XGBoost_Federated/
  │ 
  └── xgboost_centralizado.py # Centralized XGBoost model
 
-## Installation
+## Environment
+
 Make sure you have Conda and Python 3.10 installed. Then:
 
 ```bash
 conda create -n flwr-xgb python=3.10 -y
 conda activate flwr-xgb
 pip install -e .
+````
 
 ## Usage
 
@@ -39,6 +42,7 @@ This will save the test indices for evaluation:
 
 ```bash
 flwr run .
+````
 
 # First, run the federated version to save the indices of the test data points,
 # ensuring that the same samples are used for evaluation in both centralized and federated cases.
