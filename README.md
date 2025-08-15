@@ -8,7 +8,7 @@ The original model was a **classification model**, and this repository adapts it
 
 ## Repository Structure
 
-```
+````
 TFG_XGBoost_Federated/
  │ 
  ├── Federated_model/ # Federated learning scripts
