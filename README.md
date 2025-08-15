@@ -8,7 +8,7 @@ The original model was a **classification model**, and this repository adapts it
 
 ## Repository Structure
 
-```bash
+```
 TFG_XGBoost_Federated/
  │ 
  ├── Federated_model/ # Federated learning scripts
@@ -25,7 +25,7 @@ TFG_XGBoost_Federated/
  ├── pyproject.toml/  # Project dependencies and federated model configurations
  │ 
  └── xgboost_centralizado.py # Centralized XGBoost model
-´´´´
+````
 
 ## Environment
 
