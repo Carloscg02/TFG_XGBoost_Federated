@@ -7,9 +7,6 @@ This repository contains the code for my final degree project, adapting a public
 The original model was a **classification model**, and this repository adapts it to a **regression task** for the dataset containing 36 sites (`dataset_con_site_id.xlsx`). It includes a **federated model**, a **centralized model**, and a **performance evaluation script** for federated learning.
 
 ## Repository Structure
-
-
-## Repository Structure
 TFG_XGBoost_Federated/
  │ 
  ├── Federated_model/ # Federated learning scripts
@@ -26,19 +23,6 @@ TFG_XGBoost_Federated/
  ├── pyproject.toml/  # Project dependencies and federated model configurations
  │ 
  └── xgboost_centralizado.py # Centralized XGBoost model
-
- TFG_XGBoost_Federated/
-│
-├── Federated_model/ # Federated learning scripts
-│ ├── init.py # Package initializer (contains original CSVs)
-│ ├── client5G.py # Federated client code
-│ ├── server5G.py # Federated server code
-│ └── task5G.py # Federated task definitions
-│
-├── dataset_con_site_id.xlsx # Dataset used in the project
-├── Federated_performance.py # Federated model evaluation
-├── pyproject.toml # Project dependencies
-└── xgboost_centralizado.py # Centralized regression model
 
 ## Installation
 Make sure you have Conda and Python 3.10 installed. Then:
