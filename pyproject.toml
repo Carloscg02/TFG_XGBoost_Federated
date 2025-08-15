@@ -1,0 +1,63 @@
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project]
+name = "xgboost_comprehensive"
+version = "1.0.0"
+description = "Federated Learning with XGBoost and Flower for mobile network throughput estimation"
+license = "Apache-2.0"
+dependencies = [
+  "flwr[simulation]>=1.18.0",
+  "flwr-datasets>=0.5.0",
+  "xgboost==1.7.6",
+  "pandas>=2.0.0",
+  "scikit-learn>=1.2.0",
+  "openpyxl"
+]
+
+[tool.flwr.app]
+publisher = "flwrlabs"
+
+[tool.flwr.federations]
+default = "local-simulation"
+
+[tool.flwr.app.components]
+serverapp = "xgboost_comprehensive.server5G:app"
+clientapp = "xgboost_comprehensive.client5G:app"
+
+[tool.flwr.app.config]
+train-method = "bagging"
+num-server-rounds = 40
+fraction-fit = 1.0
+fraction-evaluate = 1
+centralised-eval = false
+partitioner-type = "manual"
+test-fraction = 0.2
+seed = 42
+centralised-eval-client = false
+local-epochs = 2
+scaled-lr = true
+
+[tool.flwr.app.config.params]
+objective = "reg:squarederror"
+eta = 0.125
+max-depth = 8
+eval-metric = "rmse"
+nthread = 8
+num-parallel-tree = 1
+subsample = 1
+tree-method = "hist"
+reg-alpha = 0.1
+reg-lambda = 0.001
+gamma = 0.01
+random-state = 42
+n-estimators = 2
+[tool.flwr.federations.local-simulation.options]
+num-supernodes = 36
+
+[tool.hatch.build.targets.wheel]
+packages = [ ".",]
+
+[tool.flwr.federations.local-simulation.options.backend.client-resources]
+num-cpus = 4
